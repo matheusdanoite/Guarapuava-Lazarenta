@@ -1,0 +1,112 @@
+/* Estilos Gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    overflow: hidden; /* Impede barras de rolagem */
+}
+
+/* Container que centraliza o conteúdo na tela */
+.container {
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Estilos da Página Inicial --- */
+
+.main-menu {
+    /* IMPORTANTE: Substitua 'SUA_IMAGEM_DE_FUNDO_MENU.jpg' pelo caminho da sua imagem */
+    background-image: url('/Users/matheusjosedasilva/Desktop/Trabalho Amanda/imagens/guarapuava.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo do botão principal */
+.game-button {
+    padding: 15px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo preto semitransparente */
+    border: 2px solid #fff;
+    border-radius: 8px;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.game-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Clareia ao passar o mouse */
+    transform: scale(1.05); /* Efeito de crescimento sutil */
+}
+
+/* --- Estilos para as Páginas de Jogo (que vamos criar a seguir) --- */
+
+.game-screen {
+    /* IMPORTANTE: Substitua 'SUA_IMAGEM_DE_FUNDO_JOGO.png' pelo caminho da sua imagem de jogo */
+    background-image: url('/Users/matheusjosedasilva/Desktop/Trabalho Amanda/imagens/guarapuava.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Caixa de diálogo para a história */
+.dialog-box {
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 2px solid #a0a0a0;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 50px;
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Container para os sprites de escolha */
+.sprite-options {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    gap: 40px; /* Espaço entre as opções */
+    justify-content: center;
+}
+
+/* Botão de sprite (o link que envolve a imagem) */
+.sprite-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.sprite-button img {
+    /* IMPORTANTE: Ajuste a largura e altura conforme o tamanho dos seus sprites */
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Garante que a imagem não fique distorcida */
+    display: block;
+    margin-bottom: 15px;
+    border: 4px solid transparent; /* Borda invisível para um hover suave */
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.3);
+    transition: border-color 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o sprite */
+.sprite-button:hover {
+    transform: translateY(-10px); /* Move o sprite um pouco para cima */
+}
+
+.sprite-button:hover img {
+    border-color: #fff; /* Mostra uma borda branca ao passar o mouse */
+}
