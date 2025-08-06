@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarapuava Lazarenta</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            height: 80vh;
+            border: 1px solid #ccc;
+        }
+
+        .sprite-area {
+            width: 20%;
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-area {
+            width: 60%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="game-screen2">
+
+    <div class="container">
+
+        <!-- Área do sprite do personagem -->
+        <div class="sprite-area">
+            <img src="imagens/sprite1.png" alt="Sprite do Snowy" width="100">
+        </div>
+
+        <!-- Caixa de texto com a narrativa -->
+        <div class="text-area">
+            <p>Snowy acorda e encontra o sol mais alto no céu. Ele precisa encontrar abrigo rapidamente!</p>
+        </div>
+
+        <!-- Botões para as próximas páginas -->
+        <div class="buttons">
+            <button onclick="location.href='gameover1.html'">Lagartear</button>
+            <button onclick="location.href='page3.html'">Sair caminhandinho</button>
+        </div>
+    </div>
+
+</body>
+</html>

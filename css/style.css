@@ -53,6 +53,13 @@ body, html {
     background-repeat: no-repeat;
 }
 
+.game-screen2 {
+    background-image: url('imagens/2bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Caixa de diálogo para a história */
 .dialog-box {
     background-color: rgba(0, 0, 0);
@@ -87,6 +94,6 @@ body, html {
     margin-bottom: 15px;
     border: 4px solid transparent; /* Borda invisível para um hover suave */
     border-radius: 10px;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(64, 255, 0);
     transition: border-color 0.3s;
 }
