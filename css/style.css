@@ -44,16 +44,10 @@ body, html {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.game-button:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Clareia ao passar o mouse */
-    transform: scale(1.05); /* Efeito de crescimento sutil */
-}
-
 /* --- Estilos para as Páginas de Jogo (que vamos criar a seguir) --- */
 
-.game-screen {
-    /* IMPORTANTE: Substitua 'SUA_IMAGEM_DE_FUNDO_JOGO.png' pelo caminho da sua imagem de jogo */
-    background-image: url('/Users/matheusjosedasilva/Desktop/Trabalho Amanda/imagens/guarapuava.jpg');
+.game-screen1 {
+    background-color: rgb(0, 0, 0);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -61,14 +55,10 @@ body, html {
 
 /* Caixa de diálogo para a história */
 .dialog-box {
-    background-color: rgba(0, 0, 0, 0.75);
-    border: 2px solid #a0a0a0;
-    border-radius: 10px;
-    padding: 25px;
+    background-color: rgba(0, 0, 0);
     margin-bottom: 50px;
     max-width: 700px;
     font-size: 20px;
-    line-height: 1.6;
 }
 
 /* Container para os sprites de escolha */
@@ -86,7 +76,6 @@ body, html {
     font-weight: bold;
     font-size: 18px;
     text-align: center;
-    transition: transform 0.2s ease-in-out;
 }
 
 .sprite-button img {
@@ -100,13 +89,4 @@ body, html {
     border-radius: 10px;
     background-color: rgba(0,0,0,0.3);
     transition: border-color 0.3s;
-}
-
-/* Efeito ao passar o mouse sobre o sprite */
-.sprite-button:hover {
-    transform: translateY(-10px); /* Move o sprite um pouco para cima */
-}
-
-.sprite-button:hover img {
-    border-color: #fff; /* Mostra uma borda branca ao passar o mouse */
 }
