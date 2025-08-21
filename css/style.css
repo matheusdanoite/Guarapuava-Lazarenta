@@ -18,10 +18,14 @@ body, html {
 }
 
 .main-menu {
-    background-image: url('/imagens/guarapuava.jpg');
+    background-image: url('../imagens/guarapuava.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.padding {
+    padding: 30px;
 }
 
 .game-button {
@@ -45,14 +49,14 @@ body, html {
 }
 
 .game-screen2 {
-    background-image: url('/Users/matheusjosedasilva/Desktop/Trabalho Amanda/imagens/2bg.jpg');
+    background-image: url('../imagens/2bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .game-screen3 {
-    background-image: url('/Users/matheusjosedasilva/Desktop/Trabalho Amanda/imagens/3bg.jpeg');
+    background-image: url('../imagens/3bg.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,12 +103,6 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.text-area {
-    width: 60%;
-    padding: 20px;
-    text-align: center;
 }
 
 .buttons {
