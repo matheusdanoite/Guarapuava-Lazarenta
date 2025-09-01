@@ -68,6 +68,13 @@ body, html {
     background-repeat: no-repeat;
 }
 
+.game-screen4 {
+    background-image: url('../imagens/4bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .dialog-box {
     background: linear-gradient(180deg, rgba(96, 187, 97, 0.95) 0%, rgba(61, 146, 84, 0.92) 100%);
     color: #041105;
