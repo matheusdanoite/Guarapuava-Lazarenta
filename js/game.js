@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         divineLight.id = 'divine-light';
         document.body.appendChild(divineLight);
     }
-
+    
     const isGamePage = document.body.classList.contains('game-screen1') ||
                        document.body.classList.contains('game-screen2') ||
                        document.body.classList.contains('game-screen3') ||
@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-
     const userForm = document.getElementById('user-form');
     const userInfoDiv = document.getElementById('userInfo');
     const eyelidTop = document.getElementById('eyelid-top');
@@ -137,14 +136,12 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             const searchTerm = bairroMap[userData.bairro] || 'Guarapuava, PR';
-
             const mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${encodeURIComponent(searchTerm)}&zoom=15&size=640x640&maptype=satellite&style=feature:all|element:labels|visibility:off&key=${apiKey}`;
 
             if (apiKey !== 'COLE_SUA_CHAVE_DA_API_AQUI') {
                 document.body.style.backgroundImage = `url('${mapUrl}')`;
                 document.body.classList.add('map-background');
             }
-
 
             const frioVal = parseInt(userData.frio, 10);
             const calorVal = parseInt(userData.calor, 10);
@@ -239,23 +236,47 @@ function typeWriter(element, text, speed, callback) {
 function startMeltingEffect(spriteElement) {
     const wrapper = document.createElement('div');
     wrapper.className = 'melting-sprite-container';
+    
     spriteElement.className = 'melting-sprite';
+
     if (spriteElement.parentNode.classList.contains('sprite-area')) {
         spriteElement.parentNode.insertBefore(wrapper, spriteElement);
         wrapper.appendChild(spriteElement);
+    } else {
+        spriteElement.parentNode.insertBefore(wrapper, spriteElement);
+        wrapper.appendChild(spriteElement);
     }
+
+    setInterval(() => {
+        const allDrips = wrapper.querySelectorAll('.drip');
+        allDrips.forEach(drip => {
+            let currentTop = parseFloat(drip.dataset.top || '0');
+            
+            const speed = parseFloat(drip.dataset.speed || '3');
+            
+            currentTop += speed;
+
+            drip.style.transform = `translateY(${currentTop}px)`;
+            drip.dataset.top = currentTop;
+
+            if (currentTop > 180) {
+                drip.remove();
+            }
+        });
+    }, 30); 
+
     setInterval(() => {
         const drip = document.createElement('div');
         drip.className = 'drip';
+
         const randomLeft = Math.random() * 60 + 20;
         drip.style.left = randomLeft + '%';
-        const randomDuration = Math.random() * 2 + 2;
-        drip.style.animationDuration = randomDuration + 's';
+
+        const randomSpeed = Math.random() * 2 + 2;
+        drip.dataset.speed = randomSpeed;
+        
+        drip.dataset.top = '0'; 
+
         wrapper.appendChild(drip);
-        setTimeout(() => {
-            if (drip.parentNode === wrapper) {
-                wrapper.removeChild(drip);
-            }
-        }, randomDuration * 1000);
     }, 300);
 }
