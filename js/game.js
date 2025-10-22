@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (userDataString) {
             const userData = JSON.parse(userDataString);
 
-            const apiKey = 'AIzaSyA1dsStmjgqr4UjIDZSuluUIIxwk5LV4cs';
+            const apiKey = 'API_CHAVE';
 
             const bairroMap = {
                 'alto_da_xv': 'Alto da XV, Guarapuava, PR',
